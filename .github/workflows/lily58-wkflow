@@ -1,0 +1,10 @@
+name: 'Build lily58 mikoto'
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["mikoto_520"]'
+      shield: '["lily58_left","lily58_right"]'
+      kconfig: '["CONFIG_ZMK_DISPLAY=y"]'
